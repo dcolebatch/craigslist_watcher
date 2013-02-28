@@ -40,7 +40,7 @@ class CraigslistWatcher
     while true
       begin
         listings = fetch_listings
-      rescue
+      rescue Exception => e
         puts "Exception while fetching listings: #{e}"
       end
       if listings

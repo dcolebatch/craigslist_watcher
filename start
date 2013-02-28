@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if [ "$1" ]
+then
+  export CLW_RSS=$1
+fi
+
+ruby lib/craigslist_watcher.rb
+

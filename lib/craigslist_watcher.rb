@@ -57,7 +57,7 @@ class CraigslistWatcher
       else
         puts "no listings at '#{ rss_feed_url }'"
       end
-      sleep 10
+      sleep 300
     end
     true
   end

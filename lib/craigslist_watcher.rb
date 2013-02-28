@@ -85,7 +85,7 @@ class CraigslistWatcher
   end
 
   def alert(new_listings)
-    new_listings.sort_by { |item|  - item.date.to_i }.each do |item|
+    new_listings.sort_by { |item|  item.date.to_i }.each do |item|
       puts "Item: #{item.title}"
       puts "Date: #{item.date}"
       puts "Link: #{item.link}"

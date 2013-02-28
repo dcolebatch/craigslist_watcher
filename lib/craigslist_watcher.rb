@@ -38,7 +38,11 @@ class CraigslistWatcher
   # Run the RSS checking loop!
   def run!
     while true
-      listings = fetch_listings
+      begin
+        listings = fetch_listings
+      rescue
+        puts "Exception while fetching listings: #{e}"
+      end
       if listings
         new_listings = process_listings( listings )
         if new_listings.any?
